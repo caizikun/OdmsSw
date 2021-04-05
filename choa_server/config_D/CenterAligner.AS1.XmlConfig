@@ -1,0 +1,107 @@
+<?xml version="1.0" standalone="yes"?>
+<CenterAligner.AS1>
+
+	<!--==========[ AlignStage - Center ]============-->
+
+	<!--The Chirality of the coordinates system-->
+	<CenterAligner.AS1>
+		<Name>Chirality</Name>
+		<Value>Right</Value>
+	</CenterAligner.AS1>
+
+	<!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ MotionColtroller-->
+	<CenterAligner.AS1>
+		<Name>AlignAxisToMcMap</Name>
+		<Value>X~MC1</Value>
+	</CenterAligner.AS1>
+
+	<!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ McAxis-->
+	<CenterAligner.AS1>
+		<Name>AlignAxisToMcAxisMap</Name>
+		<Value>X~X1</Value>
+	</CenterAligner.AS1>
+
+	<!--MC ~ MC Implimentation Class Name-->
+	<CenterAligner.AS1>
+		<Name>McMap</Name>
+		<Value>MC1~Free302.TnM.Device.Pmc4B</Value>
+	</CenterAligner.AS1>
+
+
+	<!--==========[ MC 1 ]============-->
+	<!--PMC4BPCI Address-->
+	<PMC4B.MC1>
+		<Name>PmcAddress</Name>
+		<Value>PMC12</Value>
+	</PMC4B.MC1>
+
+	<!--McAxis ~ PmcAxis-->
+	<PMC4B.MC1>
+		<Name>AxisMap</Name>
+		<Value>X1~Y</Value>
+	</PMC4B.MC1>
+
+	<!--McAxis ~ Stage HW Info-->
+	<PMC4B.MC1>
+		<Name>AxisStageIdMap</Name>
+		<Value>X1~S1</Value>
+	</PMC4B.MC1>
+
+
+	<!--==========[ Stage 1 : X ]============-->
+
+	<!--Drive Pulse Config-->
+	<StageBase.S1>
+		<Name>DrivePulseMode</Name>
+		<Value>PulseAndDir</Value>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>DirPulseLevel</Name>
+		<Value>PositiveHigh</Value>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>PulseDivider</Name>
+		<Value>10</Value>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>UnitToPolar</Name>
+		<Value>1</Value>
+	</StageBase.S1>
+
+	<!--Mechanical Dimension-->
+	<StageBase.S1>
+		<Name>StrokeLength</Name>
+		<Value>101274</Value>
+	</StageBase.S1>
+
+	<!--Sensor Config-->
+	<StageBase.S1>
+		<Name>SensorActiveLevel</Name>
+		<Value>ActiveLow</Value>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>OriginPolarity</Name>
+		<Value>negLimit</Value>
+	</StageBase.S1>
+
+	<!-- Default Speed -->
+	<StageBase.S1>
+		<Name>SpeedMap</Name>
+		<Value>Fast~5000;Mid~500;Slow~50</Value>
+	</StageBase.S1>
+
+	<!-- Dynamic Data File -->
+	<StageBase.S1>
+		<Name>DynamicDataFile</Name>
+		<Value>CenterAligner.X</Value>
+	</StageBase.S1>
+
+	<!-- Drive Report Delay Time -->
+	<StageBase.S1>
+		<Name>ReportDelayTime_ms</Name>
+		<Value>60</Value>
+	</StageBase.S1>
+
+
+</CenterAligner.AS1>
+

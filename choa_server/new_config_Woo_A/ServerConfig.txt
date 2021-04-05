@@ -1,0 +1,8 @@
+﻿192.168.0.42
+13000
+Woriro_A
+
+
+#server ip
+#server port
+#client id

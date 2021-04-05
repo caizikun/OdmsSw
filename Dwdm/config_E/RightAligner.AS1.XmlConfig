@@ -1,0 +1,486 @@
+<?xml version="1.0" standalone="yes"?>
+<RightAligner.AS1>
+
+  <!--==========[ RightAligner ]============-->
+
+  <RightAligner.AS1>
+    <Name>Chirality</Name>
+    <Value>Left</Value>
+    <Encrypted>false</Encrypted>
+  </RightAligner.AS1>
+
+  <!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ MotionColtroller-->
+  <RightAligner.AS1>
+    <Name>AlignAxisToMcMap</Name>
+    <Value>X~MC1;Y~MC1;Z~MC2;Tx~MC2;Ty~MC2;Tz~MC2;</Value>
+    <Encrypted>false</Encrypted>
+  </RightAligner.AS1>
+
+  <!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ McAxis-->
+  <RightAligner.AS1>
+    <Name>AlignAxisToMcAxisMap</Name>
+    <Value>X~X3;Y~X4;Z~X1;Tx~X2;Ty~X3;Tz~X4;</Value>
+    <Encrypted>false</Encrypted>
+  </RightAligner.AS1>
+
+  <!--MC ~ MC Implimentation Class Name-->
+  <RightAligner.AS1>
+    <Name>McMap</Name>
+    <Value>MC1~Free302.TnM.Device.Pmc4B;MC2~Free302.TnM.Device.Pmc4B</Value>
+    <Encrypted>false</Encrypted>
+  </RightAligner.AS1>
+
+  <!--MC ~ MC Implimentation Class Name-->
+  <LeftAligner.AS1>
+    <Name>McMapDll</Name>
+    <Value>Free302.TnM.Device.Pmc4B</Value>
+    <Encrypted>false</Encrypted>
+  </LeftAligner.AS1>
+
+  <!--==========[ MC 1 ]============-->
+
+  <!--PMC4BPCI Address-->
+  <PMC4B.MC1>
+    <Name>PmcAddress</Name>
+    <Value>PMC13</Value>
+    <Encrypted>false</Encrypted>
+  </PMC4B.MC1>
+
+  <!--McAxis ~ PmcAxis-->
+  <PMC4B.MC1>
+    <Name>AxisMap</Name>
+    <Value>X3~Z;X4~U</Value>
+    <Encrypted>false</Encrypted>
+  </PMC4B.MC1>
+
+  <!--McAxis ~ Stage HW Info-->
+  <PMC4B.MC1>
+    <Name>AxisStageIdMap</Name>
+    <Value>X3~S1;X4~S2</Value>
+    <Encrypted>false</Encrypted>
+  </PMC4B.MC1>
+
+
+  <!--==========[ MC 2 ]============-->
+
+  <!--PMC4BPCI Address-->
+  <PMC4B.MC2>
+    <Name>PmcAddress</Name>
+    <Value>PMC11</Value>
+    <Encrypted>false</Encrypted>
+  </PMC4B.MC2>
+
+  <!--McAxis ~ PmcAxis-->
+  <PMC4B.MC2>
+    <Name>AxisMap</Name>
+    <Value>X1~X;X2~Y;X3~Z;X4~U</Value>
+    <Encrypted>false</Encrypted>
+  </PMC4B.MC2>
+
+  <!--McAxis ~ Stage HW Info-->
+  <PMC4B.MC2>
+    <Name>AxisStageIdMap</Name>
+    <Value>X1~S3;X2~S4;X3~S5;X4~S6</Value>
+    <Encrypted>false</Encrypted>
+  </PMC4B.MC2>
+
+
+  <!--==========[ Stage 1 : X ]============-->
+
+  <!--Drive Pulse Config-->
+  <StageBase.S1>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>PulseDivider</Name>
+    <Value>20</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>UnitToPolar</Name>
+    <Value>1</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+
+  <!--Mechanical Dimension-->
+  <StageBase.S1>
+    <Name>StrokeLength</Name>
+    <Value>72724.4</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+
+  <!--Sensor Config-->
+  <StageBase.S1>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+
+  <!-- Default Speed -->
+  <StageBase.S1>
+    <Name>SpeedMap</Name>
+    <Value>Fast~3000;Mid~300;Slow~30</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S1>
+    <Name>DynamicDataFile</Name>
+    <Value>RightAligner.X</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S1>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>60</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S1>
+
+
+
+  <!--==========[ Stage 2 : Y ]============-->
+
+  <!--Pulse Pulse Config-->
+  <StageBase.S2>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>PulseDivider</Name>
+    <Value>20</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>UnitToPolar</Name>
+    <Value>1</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+
+  <!--Mechanical Dimension-->
+  <StageBase.S2>
+    <Name>StrokeLength</Name>
+    <Value>21287.2</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+
+  <!--Sensor Config-->
+  <StageBase.S2>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+
+  <!-- Default Speed -->
+  <StageBase.S2>
+    <Name>SpeedMap</Name>
+    <Value>Fast~3000;Mid~300;Slow~30</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S2>
+    <Name>DynamicDataFile</Name>
+    <Value>RightAligner.Y</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S2>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>60</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S2>
+
+
+
+  <!--==========[ Stage 3 : Z ]============-->
+
+  <!--Drive Pulse Config-->
+  <StageBase.S3>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+  <StageBase.S3>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+  <StageBase.S3>
+    <Name>PulseDivider</Name>
+    <Value>20</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+  <StageBase.S3>
+    <Name>UnitToPolar</Name>
+    <Value>1</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+
+  <!--Mechanical Dimension-->
+  <StageBase.S3>
+    <Name>StrokeLength</Name>
+    <Value>73452</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+
+  <!--Sensor Config-->
+  <StageBase.S3>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+  <StageBase.S3>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+
+  <!-- Default Speed -->
+  <StageBase.S3>
+    <Name>SpeedMap</Name>
+    <Value>Fast~3000;Mid~3000;Slow~30</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S3>
+    <Name>DynamicDataFile</Name>
+    <Value>RightAligner.Z</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S3>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>60</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S3>
+
+
+
+  <!--==========[ Stage 4 : Tx ]============-->
+
+  <!--Drive Pulse Config-->
+  <StageBase.S4>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+  <StageBase.S4>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+  <StageBase.S4>
+    <Name>PulseDivider</Name>
+    <Value>20</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+  <StageBase.S4>
+    <Name>UnitToPolar</Name>
+    <Value>0.003</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+
+  <!--Mechanical Dimension-->
+  <StageBase.S4>
+    <Name>StrokeLength</Name>
+    <Value>5466.6</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+
+  <!--Sensor Config-->
+  <StageBase.S4>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+  <StageBase.S4>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+
+  <!-- Default Speed -->
+  <StageBase.S4>
+    <Name>SpeedMap</Name>
+    <Value>Fast~1000;Mid~100;Slow~10</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S4>
+    <Name>DynamicDataFile</Name>
+    <Value>RightAligner.Tx</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S4>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>60</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S4>
+
+
+
+  <!--==========[ Stage 5 : Ty ]============-->
+
+  <!--Drive Pulse Config-->
+  <StageBase.S5>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+  <StageBase.S5>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+  <StageBase.S5>
+    <Name>PulseDivider</Name>
+    <Value>20</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+  <StageBase.S5>
+    <Name>UnitToPolar</Name>
+    <Value>0.0032</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+
+  <!--Mechanical Dimension-->
+  <StageBase.S5>
+    <Name>StrokeLength</Name>
+    <Value>5066.3</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+
+  <!--Sensor Config-->
+  <StageBase.S5>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+  <StageBase.S5>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+
+  <!-- Default Speed -->
+  <StageBase.S5>
+    <Name>SpeedMap</Name>
+    <Value>Fast~1000;Mid~100;Slow~10</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S5>
+    <Name>DynamicDataFile</Name>
+    <Value>RightAligner.Ty</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S5>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>60</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S5>
+
+
+
+  <!--==========[ Stage 6 : Tz ]============-->
+
+  <!--Drive Pulse Config-->
+  <StageBase.S6>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+  <StageBase.S6>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+  <StageBase.S6>
+    <Name>PulseDivider</Name>
+    <Value>20</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+  <StageBase.S6>
+    <Name>UnitToPolar</Name>
+    <Value>0.0032</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+
+  <!--Mechanical Dimension-->
+  <StageBase.S6>
+    <Name>StrokeLength</Name>
+    <Value>5105.7</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+
+  <!--Sensor Config-->
+  <StageBase.S6>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveHigh</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+  <StageBase.S6>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+
+  <!-- Default Speed -->
+  <StageBase.S6>
+    <Name>SpeedMap</Name>
+    <Value>Fast~1000;Mid~100;Slow~10</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S6>
+    <Name>DynamicDataFile</Name>
+    <Value>RightAligner.Tz</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S6>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>60</Value>
+    <Encrypted>false</Encrypted>
+  </StageBase.S6>
+
+
+
+
+</RightAligner.AS1>
+

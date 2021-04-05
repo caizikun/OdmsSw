@@ -1,0 +1,152 @@
+<?xml version="1.0" standalone="yes"?>
+<Aligner.AS3>
+
+  <!--==========[ AlignStage - Center ]============-->
+
+  <!--The Chirality of the coordinates system-->
+  <Aligner.AS3>
+    <Name>Chirality</Name>
+    <Value>Right</Value>
+  </Aligner.AS3>
+
+  <!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ MotionColtroller-->
+  <Aligner.AS3>
+    <Name>AlignAxisToMcMap</Name>
+    <Value>X~MC2;Y~MC2</Value>
+     <!--<Value>Y~MC2</Value>--> 
+  </Aligner.AS3>
+
+  <!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ McAxis-->
+  <Aligner.AS3>
+    <Name>AlignAxisToMcAxisMap</Name>
+    <Value>X~X1;Y~X2</Value>
+     <!--<Value>Y~X6</Value>--> 
+  </Aligner.AS3>
+
+  <!--MC ~ MC Implimentation Class Name-->
+  <Aligner.AS3>
+    <Name>McMap</Name>
+    <Value>MC1~Free302.TnM.Device.TestMc</Value>
+    <!--<Value>MC1~Free302.TnM.Device.Pmc4B</Value>-->
+    <!--<Value>MC1~Free302.TnM.Device.Nova8B</Value>-->
+  </Aligner.AS3>
+
+  <!--MC ~ MC Implimentation Class Name-->
+  <Aligner.AS3>
+    <Name>McMapDll</Name>
+    <Value>MC1~Free302.TnM.Device.Aligner</Value>
+    <!--<Value>MC1~Free302.TnM.Device.AutonicsMc</Value>-->
+    <!--<Value>Free302.TnM.Device.NovaMc</Value>-->
+  </Aligner.AS3>
+
+
+  <!--==========[ Stage 1 : X ]============-->
+
+  <!--Drive Pulse Config-->
+  <StageBase.S1>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>PulseDivider</Name>
+    <Value>10</Value>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>UnitToPolar</Name>
+    <Value>1</Value>
+  </StageBase.S1>
+
+  <!--Mechanical Dimension 101274 -->
+  <StageBase.S1>
+    <Name>StrokeLength</Name>
+    <Value>150000</Value>
+  </StageBase.S1>
+
+  <!--Sensor Config-->
+  <StageBase.S1>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveLow</Value>
+  </StageBase.S1>
+  <StageBase.S1>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+  </StageBase.S1>
+
+  <!-- Default Speed -->
+  <StageBase.S1>
+    <Name>SpeedMap</Name>
+    <Value>Fast~8000;Mid~300;Slow~30</Value>
+  </StageBase.S1>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S1>
+    <Name>DynamicDataFile</Name>
+    <Value>CenterAligner.X</Value>
+  </StageBase.S1>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S1>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>70</Value>
+  </StageBase.S1>
+
+  <!--==========[ Stage 2 : Y ]============-->
+
+  <!--Pulse Pulse Config-->
+  <StageBase.S2>
+    <Name>DrivePulseMode</Name>
+    <Value>PulseAndDir</Value>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>DirPulseLevel</Name>
+    <Value>PositiveHigh</Value>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>PulseDivider</Name>
+    <Value>10</Value>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>UnitToPolar</Name>
+    <Value>10</Value>
+  </StageBase.S2>
+
+  <!--Mechanical Dimension-->
+  <StageBase.S2>
+    <Name>StrokeLength</Name>
+    <Value>20000</Value>
+  </StageBase.S2>
+
+  <!--Sensor Config-->
+  <StageBase.S2>
+    <Name>SensorActiveLevel</Name>
+    <Value>ActiveLow</Value>
+  </StageBase.S2>
+  <StageBase.S2>
+    <Name>OriginPolarity</Name>
+    <Value>NegLimit</Value>
+  </StageBase.S2>
+
+  <!-- Default Speed -->
+  <StageBase.S2>
+    <Name>SpeedMap</Name>
+    <Value>Fast~1600;Mid~300;Slow~30</Value>
+  </StageBase.S2>
+
+  <!-- Dynamic Data File -->
+  <StageBase.S2>
+    <Name>DynamicDataFile</Name>
+    <Value>LeftAligner.Y</Value>
+  </StageBase.S2>
+
+  <!-- Drive Report Delay Time -->
+  <StageBase.S2>
+    <Name>ReportDelayTime_ms</Name>
+    <Value>70</Value>
+  </StageBase.S2>
+
+</Aligner.AS3>
+

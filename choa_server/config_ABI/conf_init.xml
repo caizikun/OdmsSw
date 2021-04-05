@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <APP_NAME>CHOA</APP_NAME>
+
+  <GPIB_BOARD>0</GPIB_BOARD>
+  <IsTlsFrame>true</IsTlsFrame><!--mainFrame에 TLS와 PM 모두 장착 : true-->
+  <IS_AGILENT_TLS>true</IS_AGILENT_TLS><!--Agilent TLS : true || Santec TLS : false-->
+  <GPIB_TLS>20</GPIB_TLS><!--Tls Frame 주소-->
+  <GPIB_PM>20</GPIB_PM><!--PM 주소-->
+
+  <TLS_PARAM>0;1260;1360;0.050;40</TLS_PARAM>
+  <POWERMETER_GAIN>-10;-30</POWERMETER_GAIN>
+  <PM_ALIGN_GAIN>-10</PM_ALIGN_GAIN>
+
+  <COMPORT_OSW1>12</COMPORT_OSW1>
+  <OSW_ALIGN_PORT>0</OSW_ALIGN_PORT>
+  <OSW_TLS_PORT>1</OSW_TLS_PORT>
+  <OSW_Using>true</OSW_Using><!--OSW 사용유무-->
+  <OSW_IS_NEON>true</OSW_IS_NEON>
+
+  <MC_Type>Nova</MC_Type><!--Autonics || Nova || Suruga-->
+  <Suruga_Left>11;12;13</Suruga_Left>
+  <Suruga_Right>15;16;17</Suruga_Right>
+  <Suruga_Other>19</Suruga_Other>
+  <Center_Info>false;X;F</Center_Info><!--[사용유무] ; [MC축] ; [정방향 F || 역방향 R]-->
+  <Camera_Info>false;Y;F</Camera_Info>
+
+  <DAQ_AICH_ADDRESS>0;1</DAQ_AICH_ADDRESS>
+  <DAQ_AICH_RSE>false</DAQ_AICH_RSE>
+  <DAQ_AICH_VOLT>0;10</DAQ_AICH_VOLT>
+  <DAQ_IS_SFAC>false</DAQ_IS_SFAC>
+
+  <DAQ_AIR_Using>false</DAQ_AIR_Using><!--FAB 고정용 Air Valve Control 사용 유무-->
+  <DAQ_AIR_LEFT>0</DAQ_AIR_LEFT><!--Left Air Valve 설정용 Daq DO주소-->
+  <DAQ_AIR_RIGHT>1</DAQ_AIR_RIGHT><!--Right Air Valve 설정용 Daq DO주소-->
+
+  <DAQ_UV>0;1;1;4</DAQ_UV><!--UV Cure 사용여부(0|1), Dev#, DO Port, DO Line-->
+
+
+</configs>

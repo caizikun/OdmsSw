@@ -1,0 +1,8 @@
+﻿192.168.0.65
+13000
+NEON_Songho_DWDM
+
+
+#server ip
+#server port
+#client id

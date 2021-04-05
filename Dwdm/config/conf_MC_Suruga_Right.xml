@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<NAME>YUNJE</NAME>
+
+	<!--X; Y; Z; TX; TY; TZ-->
+	<Unit>1;1;1;3;3;3</Unit>
+	<!--1=um, 3=deg-->
+	<Stroke>70000;20000;70000;16;16;16</Stroke>
+	<OriginPos>9550;7000;8000;6.12995;6.6792;7.00032</OriginPos>
+	<HomePos>35000;10000;35000;8;8;8</HomePos>
+	<OriginReturnType>1;3;1;3;3;3</OriginReturnType>
+
+	<Resolution>1;2;1;0.003;0.0032;0.0032</Resolution>
+	<Division_Data1>0;1;0;0;0;0</Division_Data1>
+	<!--Division : {0~15}={1, 2, 2.5, 4, 5, 8, 10, 20, 25, 40, 50, 80, 100, 125, 200, 250}-->
+	<Division_Data2>7;9;7;7;7;7</Division_Data2>
+	<!--Division : {0~15}={1, 2, 2.5, 4, 5, 8, 10, 20, 25, 40, 50, 80, 100, 125, 200, 250}-->
+	<Division_DataNo>2;2;2;2;2;2</Division_DataNo>
+	<!--initial data no = {1,2}-->
+
+	<!--Low Speed,High Speed-->
+	<!--LSpeed,FSpeed,Rate (pps, pps, msec)-->
+	<SpeedTable_X>100;1000;100|2000;15000;400</SpeedTable_X>
+	<!--X축-->
+	<SpeedTable_Y>100;1000;100|2000;15000;400</SpeedTable_Y>
+	<!--Y축-->
+	<SpeedTable_Z>100;1000;100|2000;20000;400</SpeedTable_Z>
+	<!--Z축-->
+	<SpeedTable_TX>100;1000;100|500;3000;200</SpeedTable_TX>
+	<!--TX축-->
+	<SpeedTable_TY>100;1000;100|500;3000;400</SpeedTable_TY>
+	<!--TY축-->
+	<SpeedTable_TZ>100;1000;100|500;3000;400</SpeedTable_TZ>
+	<!--TZ축-->
+
+</config>

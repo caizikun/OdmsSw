@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weavers 
+ VerifyAssembly="false"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:noNamespaceSchemaLocation="FodyWeavers.xsd" >
+  
+  <Costura IncludeDebugSymbols="false">
+
+    <IncludeAssemblies>
+    </IncludeAssemblies>
+    <!--<IncludeAssemblies>
+      Free302.TnM.DataAnalysis
+      Free302.MyLibrary.Utility
+    </IncludeAssemblies>-->
+    <!--<ExcludeAssemblies>
+      Free302.MyLibrary.Utility
+    </ExcludeAssemblies>-->
+  </Costura>
+  
+</Weavers>
+  

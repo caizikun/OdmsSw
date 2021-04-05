@@ -1,0 +1,7 @@
+﻿[GPIB]	20
+[LS]	-10, 1520, 1570, 10, 20
+[Align]	1550
+
+#GPIB : LS
+#LS:	Power level, sweep start nm, sweep end mm, sweep step in pm, sweep speed nm/s
+#Align: align wavelength - 

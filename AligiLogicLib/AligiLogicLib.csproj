@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>DrBAE.TnM.AligiLogicLib</RootNamespace>
+    <AssemblyName>DrBAE.TnM.AligiLogicLib</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="TnM.Utility">
+      <HintPath>..\Lib\TnM.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

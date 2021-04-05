@@ -1,0 +1,9 @@
+﻿192.168.0.63
+13000
+NEON_C
+
+
+#server ip
+#server port
+#client id
+172.30.1.28

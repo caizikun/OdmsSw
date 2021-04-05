@@ -1,0 +1,2 @@
+call msiexec /uninstall {}
+exit

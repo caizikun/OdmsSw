@@ -1,0 +1,10 @@
+[TODOs]
++ AlignLogic
+ - Approach 알고리즘 수정
+  - mV/um 수치 이용하도록
+  - mV/um 수치 ~ 사용자입력? 자동측정?
+
++ XySearch
+ -Output MMF 측 - 칩당 정렬횟수 설정 기능
+
+

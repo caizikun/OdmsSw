@@ -1,0 +1,51 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Free302.TnMLibrary.Device.StageTester.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainFormText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Stage Tester</Value>
+    </Setting>
+    <Setting Name="MainFormLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">300, 300</Value>
+    </Setting>
+    <Setting Name="MainFormSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">1016, 700</Value>
+    </Setting>
+    <Setting Name="SplitMainDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">286</Value>
+    </Setting>
+    <Setting Name="ConfigClassName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DeviceLogic</Value>
+    </Setting>
+    <Setting Name="TableUpperSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">368, 325</Value>
+    </Setting>
+    <Setting Name="AxisTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">X;Y;Z;Tx;Ty;Tz</Value>
+    </Setting>
+    <Setting Name="GridStatusColumnTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Axis;EMG;LMT+;LMT-;NORG;ORG;POS</Value>
+    </Setting>
+    <Setting Name="GridConfigColumnTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Axis;Speed;Move-;Len(μm);Move+;Stop;Zero;Home</Value>
+    </Setting>
+    <Setting Name="PositionFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Source Code Pro, 12pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="SplitGridDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">280</Value>
+    </Setting>
+    <Setting Name="SplitGridTopDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">384</Value>
+    </Setting>
+    <Setting Name="GridRowHieght" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">40</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MainFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Microsoft Sans Serif, 9.75pt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

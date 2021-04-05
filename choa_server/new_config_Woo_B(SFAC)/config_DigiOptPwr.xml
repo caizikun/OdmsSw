@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <WNDPOSX>478</WNDPOSX>
+  <WNDPOSY>5</WNDPOSY>
+  <CH_FIRST>1</CH_FIRST>
+  <CH_SECOND>2</CH_SECOND>
+  <UNIT>dBm</UNIT>
+  <REF_VALUES>1~-12.345 2~-12.345 3~0 4~0 5~0 6~0 7~0 8~0</REF_VALUES>
+</configs>

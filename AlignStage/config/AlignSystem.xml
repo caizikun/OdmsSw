@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<AlignSystem>
+
+	<AlignSystem>
+    <Name>DeviceConfigFile</Name>
+    <Value>Measure_System_A</Value>
+    <Encrypted>false</Encrypted>
+  </AlignSystem>
+	
+</AlignSystem>
+

@@ -1,0 +1,298 @@
+﻿[*삽질*]
+1. 레퍼런스 데이터 : 특정 파장에서의 파워를 구할 때
+ + 선형 보간법 이용
+ + 두 점의 데이터를 선정하는데 오류가 있음.
+  - 파장 인덱스 구할 때 반올림 
+
+2. Awg40ch 폼 : 거리센서 
+ + 멤버 IdistSensor m_distSens 할당없이 사용 - CloseStages()
+  - 코멘트 처리함.
+  - 생성자에서 할당하도록 수정 @160711
+
+3. 레퍼런스 폼
+ + Align 체크 안해도 z-approach 실행함.
+
+4. TLS 파장 sweep시 : 
+ + 매 편광상태마다 같은 log data를 중복 이용함... 매 sweep 마다 log data (파장값)이 같은가?
+ + 매 gain, pol마다 파장 설정을 장비에서 읽어옴... 파장설정이 매번 다른가?
+
+5. 장비에서 Binary data 읽어올 때 : 3번 통신함.
+ --> 매 채널마다 시간 불필요한 시간 소요
+
+6. CStageAbsPos: 
+ + Close() 호출 - Istage.GetAbsPositions()이 new 객체 반환하지 않나?
+
+
+[ToDo]
++ ref data 저장시 파장 등간격으로 할 필요가 없음
+ - 어차피 데이터 구할 때 또 선형보간법을 사용
+ - 2번 근사하므로 오차가 커짐
+
++ Ref Data : 추가정보
+ - TLS 파워, PM 포트, FAB SN
+
++ Ref측정과 DUT 측정에서 파워값의 차이가 있는가?
+ - Ref폼에서 측정시 Dut 폼보다 PDL이 매우 낮게 나온다...
+
++ MeasureForm : doFineAlign() 
+ - AlignLogic.AlignDut() 대용 가능?
+ - Roll - Param 지정, TLS 이용
+
++ DUT 채널 순서
+ - 측정폼에서 지정 가능하게?
+
+[2017-04-05]
++ Roll Parameters 기능 추가
+ - AlignForm, MeasureForm 수정
++ Dut 채널 순서 지정 기능 추가
+ - DutData: ReverseChOrder()
+ - MeasureForm: UI 추가
+
+[2017-03-02]
++ XySearchParam - config에 저장 필요
+
+
+[2016-08-19]
++ MeasureForm : PM 지정 포트만 읽어오도록 수정
+
+
+[2016-08-09]
++ log file -> lod folder에 저장
++ 측정폼:
+  - FormLoad시 Dut Ch - PmPort map
+
+[2016-08-08]
++버그수정
+ - RefForm : 
+   - port list 및 current port 조작 관련
++ SweepSystem : 
+ - sweep 시 chopPower_mW() 추가 
+   - gain level 보다 +10dB, -50 dB 벗어난 데이터 처리 -> 0dBm, -80dBm 으로 자름.
+
+
+[2016-08-02]
++ Ref폼 : MovingAveraing 선택 가능하도록 수정
++ Dut폼 : 상태창 안보이게 
++ PC Stability Test 폼 추가
+
+
+[2016-08-01]
++ FindMaxPolPos() : 8169
+ - 반파장판 조작 후 지연시간 추가
+
+[2016-07-29]
++ Ref, Dut - ExecSweepPol() 비교
+ - mPc.SetPolFilterPos():  무:유
+ - mTls.GetTlsSweepRange():  매pol마다:처음한번
+
++ FindMaxPolPos() : 
+ - 8169 편광판 조작 후 지연시간 추가
+
+
+
+[2016-07-28] 측정A 장비 테스트
++ Ref폼 : 
+  - 매 average 측정시마다 그래프 업데이트
+  - RunMulti(): mRefNew null체크 없앰.
++ DUT폼:
+  - SweepSystem.StatusUpdater - 사용후 null 처리
++ SweepSystem:
+  - calcMueller() 수정 - TnmLibrary.Mueller.CalcMaxMin() 이용
+
+
+
+[2016-07-26] 측정A 장비 테스트
++ 측정폼
+  - loss 계산 전 power 데이터 저장
+  - sweep시 상태메시지 표시
++ SweepSystem
+  - Status Updater 지원
++ Ref폼
+  - Export 파일 대화창 - 초기 폴더 지정
+
+
+[2016-07-26]
++ Measure Form - close position 표시 버그 수정
+
+
+[2016-07-22]
++ Ref 데이터 : 측정폼, 레퍼런스폼 등 자동 로딩 안하기. 
+ + MeasureForm: Reference File 버튼 추가
+
+[2016-07-20]
+ - Ref폼: 
+   - load시 데이터파일 로드 안하게  ...OK
+   - 포트 리스트-측정포트 연동-현정렬포트 연동 ...OK
+   - movetoport 구현   ...OK
+ - Measure폼: 
+   - 칩리스트-그래프 연동  ...OK   
+   - 칩바 종료시 원위치시 Z축 벌리기 ...OK
+
+
+
+[2016-07-21]
++ RefForm : move to port 수정
+
+
+[2016-07-18~20]필드 TEST
++ RefForm UI 수정
+
+
+[2016-07-15]필드 TEST
++ 
+
+[2016-07-14] 필드 TEST
++ 
+
+
+[2016-07-13] 필드 TEST
++ Ref Form :
+ - PM Wavelength : 1550, 1301 따로 적용
+ - Max Pol. Angle : 적용시  mParam에 저장, mRef 에는 적용 안함.
+
+
+[2016-07-12]
++ InitForm : PC 선택가능 하도록 수정
++ GlobalParam: GetPmPortArray() 수정
+ - 두번째 Pm 포트번호 9~40 리턴
+
+[2016-07-11]
++ O-banc PC driver 생성: PcPSG100
++ Ref Form : graph 수정
+
+
+[2016-07-08]
++ ref 측정, dut 측정 ~ 파장범위 적용하도록 수정
++ dut 측정 폼 수정
+ - 파장범위, TLS 파워, PM 포트 범위 적용
+ - config 재구성 : settings, SelfConfig 이용
+
+
+[2016-07-07]
++ DS2000 수정 : SensorID 도입
++ Reference
+ - MyLogic에서 data 관리하도록 수정
+
+
+[2016-07-06]
+1. 버그수정 : MainForm 닫을 때 
+ + 취소해도 자식폼은 이미 FormClosing()에서 리소스 정리를 완료함.
+ + 이후 재사용시 에러 발생
+ + --> Program.CanIBeClosed() 를 모든 자식폼 FormClosing()에서 호출하도록 수정
+   - Program.CanIBeClosed() : MdiFormClosing 일 경우 닫기 취소.
+
+
+
+[2016-07-05]
+1. ref 폼 정리
+ + Alignment 체크 없을 시 --> single 포트 측정만 가능하도록
+ + 진행상황 표시 메시지 수정 - 구체적 정보 표시
+
+
+[2016-07-04]
+1. config 파일 정리
+  + config 폴더 생성
+
+
+[2016-06-24]
++ ReferenceForm, MainForm 수정
+ - MyLogic.cs 추가 : 공통부분을 MyLogic에 분리
++ Configuration 파일 정리
+ - config_reference.xml, config_dwdm_measure.xml, config_initialization.xml
+
+
+[2016-06-23]
++ PortPower 수정 : 
++ frmRefPol.cs : AveragePortData()에서 moving average 제거함.
+ - RunSingle(), RunMulti() 정리
+
+
+[2016-06-15]
++ SweepSystem 수정
+  - 이름 변경: CSweepSys -> SweepSystem
+  - ReferenceData 클래스 분리
+  - DutData 클래스 분리
+
+[2016-06-15]
++ Project 시작: AWGR
++ CSweepSys 수정
+
+--------------------------------------------------------
+
+
+[2016-02-16]
+1.NeonAlignerAlignment.dll 변경
+  -version 1.0.1.2
+2.project version up
+  -version 2.2.0.0
+
+[2016-02-12]
+1.frmSourceController 폼 수정
+  - EnableForm, DisableFrom method 추가. 
+2. NeonAlignerBase.dll, NeonAligner.dll,  NeonAlignerAlignment.dll version up
+  - NeonAlignerBase.dll 1.0.0.4
+  - NeonAligner.dll 1.0.3.0
+  - NeonAlignerAlignment.dll 1.0.0.1
+  - 배삼용책임님한테 받음. 2016.02.12
+  - jeffDevBase.dll -> NeonAlignerBase.dll 변경
+
+
+[2016-02-11]
+1.CalignResult.cs 제거
+2.CSurugaseiki_MC.cs 제거.
+3.Cmsctl112ais6exDio.cs 제거.
+4.frmAlign 폼 수정
+  -yunje project것으로 대체.
+    ref. D:\work\neon\손연재\모듈화1\yunje_calign_20160205
+5.frmAlignStatus
+  -yunje project것으로 대체.
+    ref. D:\work\neon\손연재\모듈화1\yunje_calign_20160205
+
+
+
+--- 2015.10.21 ---
+1.REF. 평균적용. 
+ 
+
+
+--- 2015.10.20 ---
+1.REF. 작업시 BLS 이용하도록 수정.
+  - TLS로 정렬이 잘 않됨. (Flat FA - Flat FA 광파워 흔들림. 이유 현재까지 모름)
+2. X,Y축 이동속도 낮춤. 
+  - 정렬안정화 위해서. 
+3. Csurugaseki_MC class의 IsInMotionOK 메써드 Sleep추가.
+  - 정렬안정화 위해서.	
+
+
+--- 2015.10.16 ---
+1.frmAwg40Ch 폼의 MoveNextChip function 수정.
+  -다음 칩 이동 중 output stage가 -Z축으로 이상 이동 현상 발생.
+    -> -Z축으로 100 상대적으로 이동하게 수정.
+2.측정 중 List 상태 변화 기능 추가.
+3.Ref. 폼 현재 포트 Timer를 이용하여 출력하도록 수정.
+
+
+
+
+--- 2015.10.15 ---
+1.suji-awg ver2.1.5 1차 완성.
+  -CsweepSys class 수정.
+    ->전 포트(40 port) 관련 함수 수정. 
+	->8164,8166 담당 쓰레드 생성하여 동시 작업 수행.
+
+  -40ch ref 폼 작성.
+    -> 초기 위치 저장 및 이동 기능 추가.
+	-> multi port 자동 ref. processing 기능 추가.
+
+  -40ch awg chip 측정 폼 작성.
+    -> 초기 위치 저장 및 이동 기능 추가.
+	-> closed-position 개념 도입 및 구현.
+
+  -NeonAligner.dll version 1.0.1.0
+
+  -Source Controller 수정.
+    -> 설정과 Display 분해. (계속 문제가 발생해서 나눴음.)
+
+--- 2016.02.05 ---
+Git 생성
+

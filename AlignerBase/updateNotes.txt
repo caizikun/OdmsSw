@@ -1,0 +1,86 @@
+﻿[2016-02-05]
+Reference Assembly 변경: jeffDevBase --> NeonAlignerBase.dll
+
+[2016-01-22]
+1.재컴파일.
+ - vserion 1.0.3.0
+  
+[2016-01-15]
+1.net framwork version 변경.
+ -4.6
+  
+2. jeffDevBase.dll 변경.
+  - version 1.0.0.4
+
+
+--- 2016.01.14
+1.IalignmentAnalog 삭제.
+  -앞으로 Analog input signal로 alignment하지 않음
+
+
+--- 2016.01.13
+1.jeffDevBase.dll version up (1.0.0.3)
+
+
+--- 2015.12.16
+1.IAlignment interface 수정.
+ - AxisBlindSearch 관련 함수 및 prpoerty 추가.
+
+2.version upgrade.
+ -1.0.2.1
+
+
+--- 2015.12.04
+1.device관련 interface 삭제.
+ - 삭제한 inteface는 jeffDevBase.dll로 이동.
+
+2.jeffDevBase.dll 추가.
+ -version 1.0.0.1
+ 
+3.version upgrade.
+ -1.0.2.0
+
+
+--- 2015.11.25
+1. IAlignmentDigital inteface 수정.
+ - void SyncAxisSearchDigital(int _axis, int _detectPort, int _rng, double _step) 추가
+ - void SyncAxisSearchDigital(int _axis, int _detectPort, int _rng, double _step, double[] _pows, double[] _poss) 삭제
+2. version 1.0.1.4
+
+--- 2015.10.28
+1.Isrcmeter inteface 수정
+  -> OutputState() 추가
+  -> GetVoltCompliance() 추가
+  -> GetCurrentCompliance() 추가
+  -> SetMeasMode() 추가
+  -> GetMeasMode() 추가
+
+
+2.assembly version 수정
+  -> 1.0.1.3
+ 
+3.property 추가
+  -> SPEED_FAST, SPEED_MED, SPEED_NORMAL
+
+
+
+--- 2015.10.27
+1.Isrcmeter inteface 수정.
+2.assembly version 1.0.1.2로 수정.
+
+--- 2015.10.26
+1.IsoMeter inteface 수정.
+  -> Isrcmeter로 이름 변경.
+	
+--- 2015.10.15
+1.IAlignmentDigital interface 메써드 추가.
+  -> void RollOutDigital(int _portFirst, int _portLast, int _rollDist, int _rng);
+
+--- 2015.10.13
+1.IoptMultimeter iterface 메써드 추가. 
+  -> void SetPdSweepMode(int _startWave, int _stopWave, double _step)
+  -> void StopPdSweepMode();
+  -> List<List<double>> GetPwrLog();
+
+--- 2015.09.25
+  1.IsoMeter 접근자 public 추가. 

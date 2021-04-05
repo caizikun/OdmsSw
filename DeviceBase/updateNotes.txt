@@ -1,0 +1,46 @@
+﻿[2016-04-01]
+1.IpolController interface 수정.
+  - SetToNegaLinearDiagonal , SetToLHcircular method 추가.
+2.version 변경.
+  - 1.0.0.5
+
+[2016-02-05]
+프로젝트명, Namespace 변경 --> Neon.Aligner
+어셈블리 이름 --> NeonAlignerBase
+
+[2016-01-15]
+1.IairValvController inteface 추가.
+  - 1.0.0.4
+2. .net framwork 변경.
+  -4.6
+
+--- 2015.12.07---
+1.Ipdlmeter inteface 추가.
+
+2.IpolController inteface 수정.
+ -public 속성
+
+3.version 업 
+ - 1.0.0.3
+
+
+--- 2015.12.04_3 ---
+1.IoptMultimeter inteface 수정.
+ -interface public 속성으로 
+
+2.Ipdlmeter 추가중...
+
+3.version 업 
+ - 1.0.0.2
+
+
+--- 2015.12.04_2 ---
+1.IdistSensor interface 추가.
+
+2.version 업 
+ - 1.0.0.1
+
+--- 2015.12.04 ---
+1.fisrt build. 
+ -version 1.0.0.0
+

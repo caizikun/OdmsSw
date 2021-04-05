@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StageTester", "StageTester.csproj", "{DE4F4F1E-6D2F-4A2A-B076-307C152D0FAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlignStage", "..\AlignStageLibrary_20151001\AlignStage\AlignStage.csproj", "{87A0B56C-47F1-47CF-8C0D-3C4D74A46D6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFA610", "..\AlignStageLibrary_20151001\IFA610\IFA610.csproj", "{028111F4-23F1-4937-BBA9-0BBBCD78622F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE4F4F1E-6D2F-4A2A-B076-307C152D0FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4F4F1E-6D2F-4A2A-B076-307C152D0FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4F4F1E-6D2F-4A2A-B076-307C152D0FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4F4F1E-6D2F-4A2A-B076-307C152D0FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A0B56C-47F1-47CF-8C0D-3C4D74A46D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A0B56C-47F1-47CF-8C0D-3C4D74A46D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A0B56C-47F1-47CF-8C0D-3C4D74A46D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A0B56C-47F1-47CF-8C0D-3C4D74A46D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028111F4-23F1-4937-BBA9-0BBBCD78622F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028111F4-23F1-4937-BBA9-0BBBCD78622F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028111F4-23F1-4937-BBA9-0BBBCD78622F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028111F4-23F1-4937-BBA9-0BBBCD78622F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

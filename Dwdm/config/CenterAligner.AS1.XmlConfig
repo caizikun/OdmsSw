@@ -1,0 +1,194 @@
+<?xml version="1.0" standalone="yes"?>
+<CenterAligner.AS1>
+
+	<!--==========[ AlignStage - Center ]============-->
+
+	<!--The Chirality of the coordinates system-->
+	<CenterAligner.AS1>
+		<Name>Chirality</Name>
+		<Value>Right</Value>
+		<Encrypted>false</Encrypted>
+	</CenterAligner.AS1>
+
+	<!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ MotionColtroller-->
+	<CenterAligner.AS1>
+		<Name>AlignAxisToMcMap</Name>
+		<Value>X~MC1;Y~MC1</Value>
+		<Encrypted>false</Encrypted>
+	</CenterAligner.AS1>
+
+	<!--AlignAxis(X,Y,Z,Tx,Ty,Tz) ~ McAxis-->
+	<CenterAligner.AS1>
+		<Name>AlignAxisToMcAxisMap</Name>
+		<Value>X~X1;Y~X2</Value>
+		<Encrypted>false</Encrypted>
+	</CenterAligner.AS1>
+
+	<!--MC ~ MC Implimentation Class Name-->
+	<CenterAligner.AS1>
+		<Name>McMap</Name>
+		<Value>MC1~Free302.TnM.Device.Pmc4B</Value>
+		<Encrypted>false</Encrypted>
+	</CenterAligner.AS1>
+
+	<!--MC ~ MC Implimentation Class Name-->
+	<LeftAligner.AS1>
+		<Name>McMapDll</Name>
+		<Value>Free302.TnM.Device.Pmc4B</Value>
+		<Encrypted>false</Encrypted>
+	</LeftAligner.AS1>
+
+	<!--==========[ MC 1 ]============-->
+	<!--PMC4BPCI Address-->
+	<PMC4B.MC1>
+		<Name>PmcAddress</Name>
+		<Value>PMC07</Value>
+		<Encrypted>false</Encrypted>
+	</PMC4B.MC1>
+
+	<!--McAxis ~ PmcAxis-->
+	<PMC4B.MC1>
+		<Name>AxisMap</Name>
+		<Value>X1~X;X2~Y</Value>
+		<Encrypted>false</Encrypted>
+	</PMC4B.MC1>
+
+	<!--McAxis ~ Stage HW Info-->
+	<PMC4B.MC1>
+		<Name>AxisStageIdMap</Name>
+		<Value>X1~S1;X2~S2</Value>
+		<Encrypted>false</Encrypted>
+	</PMC4B.MC1>
+
+
+	<!--==========[ Stage 1 : X ]============-->
+
+	<!--Drive Pulse Config-->
+	<StageBase.S1>
+		<Name>DrivePulseMode</Name>
+		<Value>PulseAndDir</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>DirPulseLevel</Name>
+		<Value>PositiveHigh</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>PulseDivider</Name>
+		<Value>10</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>UnitToPolar</Name>
+		<Value>1</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+
+	<!--Mechanical Dimension-->
+	<StageBase.S1>
+		<Name>StrokeLength</Name>
+		<Value>101274</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+
+	<!--Sensor Config-->
+	<StageBase.S1>
+		<Name>SensorActiveLevel</Name>
+		<Value>ActiveHigh</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+	<StageBase.S1>
+		<Name>OriginPolarity</Name>
+		<Value>NegLimit</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+
+	<!-- Default Speed -->
+	<StageBase.S1>
+		<Name>SpeedMap</Name>
+		<Value>Fast~3000;Mid~300;Slow~30</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+
+	<!-- Dynamic Data File -->
+	<StageBase.S1>
+		<Name>DynamicDataFile</Name>
+		<Value>CenterAligner.X</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+
+	<!-- Drive Report Delay Time -->
+	<StageBase.S1>
+		<Name>ReportDelayTime_ms</Name>
+		<Value>60</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S1>
+
+
+	<!--==========[ Stage 2 : Y ]============-->
+
+	<!--Drive Pulse Config-->
+	<StageBase.S2>
+		<Name>DrivePulseMode</Name>
+		<Value>PulseAndDir</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+	<StageBase.S2>
+		<Name>DirPulseLevel</Name>
+		<Value>PositiveHigh</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+	<StageBase.S2>
+		<Name>PulseDivider</Name>
+		<Value>10</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+	<StageBase.S2>
+		<Name>UnitToPolar</Name>
+		<Value>1</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+
+	<!--Mechanical Dimension-->
+	<StageBase.S2>
+		<Name>StrokeLength</Name>
+		<Value>200000</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+
+	<!--Sensor Config-->
+	<StageBase.S2>
+		<Name>SensorActiveLevel</Name>
+		<Value>ActiveHigh</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+	<StageBase.S2>
+		<Name>OriginPolarity</Name>
+		<Value>NegLimit</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+
+	<!-- Default Speed -->
+	<StageBase.S2>
+		<Name>SpeedMap</Name>
+		<Value>Fast~3000;Mid~300;Slow~30</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+
+	<!-- Dynamic Data File -->
+	<StageBase.S2>
+		<Name>DynamicDataFile</Name>
+		<Value>CenterAligner.Y</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+
+	<!-- Drive Report Delay Time -->
+	<StageBase.S2>
+		<Name>ReportDelayTime_ms</Name>
+		<Value>60</Value>
+		<Encrypted>false</Encrypted>
+	</StageBase.S2>
+
+</CenterAligner.AS1>
+

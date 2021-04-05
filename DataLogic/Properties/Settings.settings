@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Neon.Aligner.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DataControl_Shift" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">-0.1</Value>
+    </Setting>
+    <Setting Name="DataControl_FormSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">1000, 600</Value>
+    </Setting>
+    <Setting Name="DataControl_Category" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DataControl_Operator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DaeDo</Value>
+    </Setting>
+    <Setting Name="DataControl_SaveFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.</Value>
+    </Setting>
+    <Setting Name="DataControl_Comment" Type="System.String" Scope="User">
+      <Value Profile="(Default)">대도A - </Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

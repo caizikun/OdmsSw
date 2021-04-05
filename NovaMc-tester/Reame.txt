@@ -1,0 +1,62 @@
+﻿- Open: M/C Board Open
+- Select Axis
+- Write: Position
+- Read: Position, Limit
+
+2017.0906
+- 본딩장비의 Z축의 속도는 1900이하로 주어야 함
+
+Consol print
+
+		/*
+		 * 딕셔너리 생성 방법
+				public static Dictionary<McAxis, NovaMcAxis> mAxisMap = new Dictionary<McAxis, NovaMcAxis>
+				{
+					{Nova8MC.McAxis.AX, NovaMcAxis.X},
+					{Nova8MC.McAxis.AY, NovaMcAxis.Y},
+					{Nova8MC.McAxis.AZ, NovaMcAxis.Z},
+					{Nova8MC.McAxis.AU, NovaMcAxis.U},
+
+					{Nova8MC.McAxis.BX, NovaMcAxis.X},
+					{Nova8MC.McAxis.BY, NovaMcAxis.Y},
+					{Nova8MC.McAxis.BZ, NovaMcAxis.Z},
+					{Nova8MC.McAxis.BU, NovaMcAxis.U},
+				};
+		*/
+
+
+			//None = 0x0, X1 = 0x01, X2 = 0x02, X3 = 0x04, X4 = 0x08, X5 = 0x10, X6 = 0x20,
+			//All = X1 | X2 | X3 | X4 | X5 | X6
+			// 2017.06.23 Jeon
+			//None = 0x0, X1 = 0x01, X2 = 0x02, X3 = 0x04, X4 = 0x08, X5 = 0x10, X6 = 0x20, X7 = 0x40, X8 = 0x80,
+			//All = X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8
+
+			// 2017.08.29 Jeon
+			//X1 = 0x01, X2 = 0x02, X3 = 0x04, X4 = 0x08, X5 = 0x10, X6 = 0x20, X7 = 0x40, X8 = 0x80,
+			None = 0x0, AX = 0x01, AY = 0x02, AZ = 0x04, AU = 0x08, BX = 0x10, BY = 0x20, BZ = 0x40, BU = 0x80,
+			All = AX | AY | AU | AZ | BX | BY | BZ | BU
+
+			//var vNovaMcAxis = Enum.GetValues(typeof(NovaMcAxis));
+
+			//var axis = Enum.GetValues(typeof(NovaMcAxis)).Cast<NovaMcAxis>().Where(x => (McAxis)x == (McAxis)pAxis).FirstOrDefault();
+
+			//if mAxisMap.ContainsValue((McAxis)pAxis);
+
+
+			//var axis = Enum.GetValues(typeof(NovaMcAxis)).Cast<NovaMcAxis>().Where(x => (int)x == (int)pAxis).FirstOrDefault();
+			//mAxisMap = mConfig["AxisMap"].Unpack<McAxis, NovaMcAxis>();
+
+			/*
+			mAxisMap = new Dictionary<McAxis, NovaMcAxis>();
+			mAxisMap.Clear();
+
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.AX, NovaMcAxis.X);
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.AY, NovaMcAxis.Y);
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.AZ, NovaMcAxis.Z);
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.AU, NovaMcAxis.U);
+
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.BX, NovaMcAxis.X);
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.BY, NovaMcAxis.Y);
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.BZ, NovaMcAxis.Z);
+			Nova8MC.mAxisMap.Add(Nova8MC.McAxis.BU, NovaMcAxis.U);
+			*/

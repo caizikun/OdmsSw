@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Neon.Aligner.UI" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UvCuringTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="UvOpenDistance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="UvCheckRight" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UvCheckLeft" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UvStartingLeft" Type="System.String" Scope="User">
+      <Value Profile="(Default)">44326</Value>
+    </Setting>
+    <Setting Name="UvStartingRight" Type="System.String" Scope="User">
+      <Value Profile="(Default)">44326</Value>
+    </Setting>
+    <Setting Name="UvFormLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">100, 100</Value>
+    </Setting>
+    <Setting Name="UvFinalDistance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20000</Value>
+    </Setting>
+    <Setting Name="UvCameraPosition" Type="System.String" Scope="User">
+      <Value Profile="(Default)">94000</Value>
+    </Setting>
+    <Setting Name="UvUvPosition" Type="System.String" Scope="User">
+      <Value Profile="(Default)">42000</Value>
+    </Setting>
+    <Setting Name="UvCloseDistance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9950</Value>
+    </Setting>
+    <Setting Name="Uv_DutType" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UvCheckLeftAlign" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UvCheckRightAlign" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UvApproachDistance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="UvAlignOpmPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="UvCloseDistanceSlow" Type="System.String" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="UvCloseSlowSpeed" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

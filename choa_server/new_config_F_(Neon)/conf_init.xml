@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <APP_NAME>CHOA</APP_NAME>
+
+  <GPIB_BOARD>0</GPIB_BOARD>
+  <GPIB_TLS>1</GPIB_TLS><!--TLS 주소-->
+  <TLS_TYPE>2</TLS_TYPE><!--server=0; Agilent TLS : 1 || Santec TLS : 2 || HsbLs = 3-->
+  <TLS_PARAM>0;1530;1630;0.050;50</TLS_PARAM><!--dBm;start;stop;step;speed-->
+
+  <GPIB_PM>20</GPIB_PM><!--OPM 주소-->
+  <OPM_TYPE>1</OPM_TYPE><!--Agilent=1; HsbOpm=2; Santec=3-->
+  <IsTlsFrame>0</IsTlsFrame><!--Agilent Frame에 TLS와 PM 모두 장착 : 1 -->
+  <POWERMETER_GAIN>0;-20</POWERMETER_GAIN>
+  <PM_ALIGN_GAIN>0</PM_ALIGN_GAIN>
+  <OPM_AVG_TIME_US>100</OPM_AVG_TIME_US>
+  <OPM_HSB>4;2;1.10;0.8;0.00005;3;1.34;0.8;0.00005;4;1.10;0.8;0.00005;5;1.34;0.8;0.00005</OPM_HSB><!--#ch;AI#,R,eta,Vmin-->
+
+  <COMPORT_OSW1>11</COMPORT_OSW1>
+  <OSW_ALIGN_PORT>0</OSW_ALIGN_PORT>
+  <OSW_TLS_PORT>1</OSW_TLS_PORT>
+  <OSW_Using>0</OSW_Using><!--OSW 사용유무=0|1-->
+  <OSW_IS_NEON>0</OSW_IS_NEON>
+
+  <MC_Type>Nova</MC_Type><!--Autonics || Nova || Suruga-->
+  <Suruga_Left>11;12;13</Suruga_Left>
+  <Suruga_Right>15;16;17</Suruga_Right>
+  <Suruga_Other>19</Suruga_Other>
+  <Center_Info>1;X;F</Center_Info><!--[사용유무=0|1] ; [MC축] ; [정방향 F || 역방향 R]-->
+  <Camera_Info>1;Y;F</Camera_Info>
+
+  <DAQ_BASE_PARAM>10000;100</DAQ_BASE_PARAM>
+  
+  <DAQ_AICH_ADDRESS>1;0</DAQ_AICH_ADDRESS>
+  <DAQ_AICH_RSE>1</DAQ_AICH_RSE><!--0|1-->
+  <DAQ_AICH_VOLT>0;10</DAQ_AICH_VOLT>
+  <DAQ_IS_SFAC>0</DAQ_IS_SFAC><!--0|1-->
+
+  <DAQ_AIR_Using>0</DAQ_AIR_Using><!--FAB 고정용 Air Valve Control 사용 유무=0|1-->
+  <DAQ_AIR_LEFT>0</DAQ_AIR_LEFT><!--Left Air Valve 설정용 Daq DO주소-->
+  <DAQ_AIR_RIGHT>1</DAQ_AIR_RIGHT><!--Right Air Valve 설정용 Daq DO주소-->
+
+  <DAQ_UV>0;1;1;0</DAQ_UV><!--UV Cure 사용여부(0|1), Dev#, DO Port, DO Line-->
+
+
+</configs>

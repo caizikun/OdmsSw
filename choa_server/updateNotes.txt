@@ -1,0 +1,206 @@
+﻿[2016-11-22] ko
+1. TLS Power, Gain1, Gain2 프로그램 초기화시 config값 설정
+	- frmWdmRef
+	- frmCwdmDemuxFa, frmCwdmMux1f, frmCwdmMuxFa, frmLwdm1f, frmLwdmFa
+
+[2016-11-21] ko
+1. Log기록 (LogItem) 기능 추가
+	- LogItem
+	- frmCwdmDemuxFa, frmCwdmMux1f, frmCwdmMuxFa, frmCwdmMuxFaBud, frmLwdm1f, frmLwdmFa
+
+[2016-11-11] ko
+1. frmDigitalOptPwr 이상 작동 문제 해결 (각 버튼들의 이벤트가 실행코드와 연결이 되어있지 않았던 부분 수정)
+    - frmDigitalOptPwr
+
+[2016-11-04] ko
+1. 측정 중 SyncSearch 기능 제거 ▶ Stage 상하좌우로 50㎛이동 후 제자리로 원위치 & Alignment 가능여부 확인
+	- frmCwdmMuxFa, frmCwdmDemuxFa, frmLwdmFa, frmCwdmMuxBud, frmCwdm1f, frmLwdm1f
+
+[2016-11-01] ko
+1. Reference : Globle변수 적용(reference 파일 이름) 
+  - Non편광 : public static string g_strRef;	          
+  - frmInitialization : Initialization Load시 기본값 적용(고정값) 
+  - frmWdmRef : Ref Apply설정시 Global변수값 ref파일로 저장 
+  - frmCwdmDemux1f, frmCwdmDemuxFa, frmCwdmMux1f, frmCwdmMuxFa, frmCwdmMuxFaBud, frmLwdm1f, frmLwdmFa : 폼 초기화시 global값 Load
+
+[2016-10-18] ko
+1. 칩 측정완료 후 'Stage Open' code 수정(10000 뒤로) 
+   - frmCwdmDemuxFa, frmCwdmMux1f, frmCwdmMuxFa, frmCwdmMuxFaBud, frmLwdm1f, frmLwdmFa
+2. 초기위치 기능 비활성화 (코드 주석처리)
+  - frmCwdmMuxBud, frmLwdmFa
+
+[2016-09-25]
+ 1. Agilent O band TLS 대응 프로그램 수정
+	- frmInitialization -> InitDevices() : Santec TLS 연결 코드 삭제 / CGlobal.g_tls = agil8164; 변경 // C8164choa.cs 수정
+	- reference frm & 측정frm : O band측정 sweep 정보 수정 (파장 & 측정 Power)
+	- 광Switch 코드 삭제 : 스위치 적용 없이 프로그램 구동
+
+
+[BUG]
+ + 2016-08-19: 
+  - CsnatecTls.cs
+    - SetSweepRange(): SetTriggerOutStep(_step) 호출
+	- SetTriggerOutStep() : 명령어 에러 "TRIG:OUTP"
+
+
+
+
+
+[2016-03-18]
+1.lwdm Fa form 추가
+  -Center stage이동하면서 칩바 측정하도록 수정.
+
+[2016-03-11]
+1.lwdm 1F form 추가
+  -Center stage이동하면서 칩바 측정하도록 수정.
+
+[2016-03-07]
+1.MoveNextLayerChipBar() 수정
+  - 다음칩으로 갈때 한 번 Z축 closing되는 부분 없앰.
+   
+[2016-03-04]
+1.neonAlignerAlignment dll 교체.
+  -version 1.0.2.1 <-- debugging 필요.
+2.frmCwdmDemuxFa form 수정.
+  - chipbar간 거리(x,y) 정보 config 파일에서 불러오도록 수정.
+  - MoveNextChip method 수정 : 복잡한 계산 없이 평행 이동.
+  
+
+[2016-03-03]
+1.frmCwdmDemuxFa form 멀티 지그 이용 측정 가능하도록 수정.
+  -XyFullBlind 파라메터 입력받도록 수정.
+  -alignment dist. 변경 10 um -> 6um
+  -ChipBar 첫번째 칩 포지션 저장.
+  -tls power 수정 (-15dBm - > -12dBm)
+
+
+[2016-03-02]
+1.frmCwdmDemuxFa form 멀티 지그 이용 측정 가능하도록 수정.
+  -Center stage이동하면서 칩바 측정하도록 수정.
+  -XyFullBlind 파라메터 입력받도록 수정중. (현재 하드코딩.)
+
+
+[2016-02-26]
+1.NeonAlignmerAlignmet.dll 변경.
+  - 1.0.2.0
+2.NeonAligner.dll 변경.
+  - 1.0.4.0
+3.frmAlign 수정
+  -XyFullBlindSearch 관련 추가
+4.frmAlignStatus 수정
+  -XyFullBlindSearch 관련 추가
+
+
+[2016-02-24]
++ frmCwdmMuxFaBud 수정:
+ - gain level, reference file 읽어오는 기능 추가
+ - 이름변경: MoveTo() --> returnToInitalChipPosition()
+ - 바칩 완료 후 : 자동귀환 + 스테이지 오픈(z축 500+10000 이격) 수행하도록 수정
++ reference form 수정: reference file 읽어오기, 저장하기 기능 추가
+
+
+[2016-02-15]
+1.frmCwdmMuxFaBud 폼 수정.
+  -alignment distance: 10 -> 6um
+   이유는 모르겠지만 alignment distance가 10일 경우(A,B 장비는 10um)에 
+   측정값이 일정하게 나오지 않는 문제 발생함.
+   6um로 변경 후 안정적으로 측정이 됨.
+2.frmCwdmMuxFaBud 폼 수정
+  -TLS power -15dBm -> -12dBm.
+
+[2016-02-12]
+레퍼런스 어셈블리 : NeonAlignerBase.dll 추가
+불필요한 레퍼런스 제거: ...
+
+[2016-02-11]
+1.frmCwdmMuxFaBud 폼 수정
+  -position 저장 부분 integer -> double로 변경.
+  -측정 테스트
+    1chipbar(10chips) : 약 3분 40초
+  
+
+[2016-02-05]
+1.frmPorcessRes form의 speak 부분 제거.
+2.frmCwdmMuxFaBud 폼 추가
+3.frmCwdmMuxFaBud 폼 칩바 자동 측정부분 수정
+  - Center stage 이동.
+  - position tab 수정. 
+    ->initial position. out,center
+	->close-position. out
+
+
+[2016-01-29]
+1.mainform 캡션바에 컴파일 날짜 입력
+
+[2016-01-21]
+1.frmCwdmDemuxFa 폼 버그 수정.
+  - Cladding mode power 제거체크하고 측정할 경우 Alignment 실패하는 버그 수정.
+   
+2.frmCwdmMuxFa 폼 수정.
+  - Rollalignment parameter 변경 : range 16 , step 1
+
+  ==측정속도 테스트==
+  
+  Demux
+  clad, Roll Ranage : 70 ,  step : 5 , chips : 24 -> 00:10:00
+  eli-cladm, Roll Ranage : 70 ,  step : 5 , chips : 24 -> 00:13:54
+
+  mux  
+  roll Ranage : 20 ,  step : 1 , chips : 24 ->00:14:02
+  roll Ranage : 16 ,  step : 1 , chips : 24 ->00:13:44
+   
+
+
+[2016-01-19]
+1.AxisSearch Graph 폼 변경.
+  - doona prjoect꺼 복사.
+
+2.mux 칩 테스트 완료.!!
+
+
+[2016-01-18]
+1.AlignTest form 제거.
+
+
+
+[2016-01-15]
+1.net framwork version 변경.
+ ->4.6
+
+2. jeffDevBase.dll 변경.
+  - version 1.0.0.4
+
+  
+
+------ 2016.1.13 -------
+1.배삼용 책임에게 받은 Choa project로 새로운 solution update.
+   ref. D:\work\neon\배삼용책임한테 받은 소스코드\20160113\choa_calign
+
+------ 2016.1.12 -------
+1.NeonAligner project 추가. 
+  ref D:\work\neon\library\neonAligner_20151216
+
+2.IAlignmentDgital inteface 수정.
+  -method 이름 변경, 불필요한 method 제거 및 통합. (배삼용 책임과 협의함.)
+
+3.NeonAlignerAlignment project 생성 및 솔루션에 추가.
+  -기존 choa project에 있던 Calignment class를 Dll로 만들어 모듈화 할 계획임.
+
+4.NeonAlignerAlignment project의 Calignment.cs 수정중.
+  
+  
+
+[2015-11-21]
++ Ref Form:
+ - MA버튼 : ma 횟수를 현재 텍스트박스에서 읽어서 반영하도록 수정
+ - averaging 완료 후 전체횟수를 텍트스박스에 표시하도록 수정
+ - stop 시: averaging loop에서 취소 처리하도록 상태변수 boolCancel 추가
+ - bug: 
+  - 파장 step 조정시 폼 재시작 필요 - CswpRefNonpol 클래스 초기화
+  - ref 파장 스텝과 측정시 파장스텝이 다를 경우 ~ 메시지 없음
+
+[2015-12-08]
++ SourceController 수정
+ - 외부 변수 참조 제거 ~ CGlobal 클래스
+ - 독립 클래스 라이브러리로 변환함
+

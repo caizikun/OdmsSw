@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2402DA36-7643-4507-A76A-1D06AF93F7CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Neon.Dwdm</RootNamespace>
+    <AssemblyName>Neon.Dwdm</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ic.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2BDD1F09E53BDBC0082958B83771891EA99E9966</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>suji215_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DrBae.TnM.Device.DaqBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DrBae.TnM.Device.DaqBase.dll</HintPath>
+    </Reference>
+    <Reference Include="DrBAE.TnM.TcpLib">
+      <HintPath>..\Lib\DrBAE.TnM.TcpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DrBae.TnM.UI.WdmGraph, Version=2019.218.1046.135, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DrBae.TnM.UI.WdmGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="Free302.MyLibrary.Config, Version=2016.706.2120.261, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Free302.MyLibrary.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Free302.MyLibrary.SwInfo, Version=2016.706.2137.258, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Free302.MyLibrary.SwInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Free302.MyLibrary.Utility, Version=2017.926.1020.1861, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Free302.MyLibrary.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Free302.TnM.DataAnalysis, Version=2016.1026.1730.65, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Free302.TnM.DataAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Free302.TnMLibrary.DataAnalysis, Version=2016.728.1426.181, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Free302.TnMLibrary.DataAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="HanDataGridView">
+      <HintPath>..\Lib\HanDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Jeffsoft_color">
+      <HintPath>..\Lib\Jeffsoft_color.dll</HintPath>
+    </Reference>
+    <Reference Include="Jeffsoft_math, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Jeffsoft_math.dll</HintPath>
+    </Reference>
+    <Reference Include="Jeffsoft_optic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Jeffsoft_optic.dll</HintPath>
+    </Reference>
+    <Reference Include="Jeffsoft_timer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Jeffsoft_timer.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Common, Version=15.0.40.49154, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NationalInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.DAQmx, Version=15.5.40.109, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NationalInstruments.DAQmx.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.NI4882, Version=13.0.45.159, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NationalInstruments.NI4882.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.NiLmClientDLL, Version=15.1.40.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NationalInstruments.NiLmClientDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.UI, Version=15.0.45.49153, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NationalInstruments.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.UI.WindowsForms, Version=15.0.45.49153, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NationalInstruments.UI.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NeonKo.DeviceCommon">
+      <HintPath>..\Lib\NeonKo.DeviceCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="NeonKo.Logics">
+      <HintPath>..\Lib\NeonKo.Logics.dll</HintPath>
+    </Reference>
+    <Reference Include="Pigtail">
+      <HintPath>..\Lib\Pigtail.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TnM.Common">
+      <HintPath>..\Lib\TnM.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="TnM.DeviceBase">
+      <HintPath>..\Lib\TnM.DeviceBase.dll</HintPath>
+    </Reference>
+    <Reference Include="TnM.DeviceBaseFx, Version=2018.1002.1732.244, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\TnM.DeviceBaseFx.dll</HintPath>
+    </Reference>
+    <Reference Include="TnM.Utility, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\TnM.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\choa_server\frm\frmDistSensViewer.cs">
+      <Link>form\frmDistSensViewer.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\choa_server\frm\frmDistSensViewer.designer.cs">
+      <Link>form\frmDistSensViewer.designer.cs</Link>
+      <DependentUpon>frmDistSensViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\choa_server\frm\OpmDisplayForm.cs">
+      <Link>form\OpmDisplayForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\choa_server\frm\OpmDisplayForm.designer.cs">
+      <Link>form\OpmDisplayForm.designer.cs</Link>
+      <DependentUpon>OpmDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="form\ChamberControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ChamberControl.Designer.cs">
+      <DependentUpon>ChamberControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\McuTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\McuTestForm.Designer.cs">
+      <DependentUpon>McuTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ScanForm.Designer.cs">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ScanMonitorPort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ScanMonitorPort.Designer.cs">
+      <DependentUpon>ScanMonitorPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\TlsStateTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\TlsStateTestForm.Designer.cs">
+      <DependentUpon>TlsStateTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\uiStageControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\uiStageControl.Designer.cs">
+      <DependentUpon>uiStageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logic\C8164.cs" />
+    <Compile Include="logic\AgilentFrameSystem.cs" />
+    <Compile Include="logic\IFormCanClosed.cs" />
+    <Compile Include="logic\MyLogic.cs" />
+    <Compile Include="logic\GlobalParam.cs" />
+    <Compile Include="logic\CprogRes.cs" />
+    <Compile Include="logic\DataTypes.cs" />
+    <Compile Include="logic\ScanLogic.cs" />
+    <Compile Include="logic\SweepLogicDwdm.cs" />
+    <Compile Include="form\AlignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\AlignForm.designer.cs">
+      <DependentUpon>AlignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmAlignStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmAlignStatus.designer.cs">
+      <DependentUpon>frmAlignStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmAxisSearchGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmAxisSearchGraph.designer.cs">
+      <DependentUpon>frmAxisSearchGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MeasureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MeasureForm.designer.cs">
+      <DependentUpon>MeasureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\InitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\InitForm.designer.cs">
+      <DependentUpon>InitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmProcessRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmProcessRes.designer.cs">
+      <DependentUpon>frmProcessRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmSourceController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmSourceController.designer.cs">
+      <DependentUpon>frmSourceController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmStageControl3Stage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmStageControl3Stage.designer.cs">
+      <DependentUpon>frmStageControl3Stage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ReferenceForm.designer.cs">
+      <DependentUpon>ReferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logic\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="..\choa_server\frm\frmDistSensViewer.resx">
+      <Link>form\frmDistSensViewer.resx</Link>
+      <DependentUpon>frmDistSensViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\choa_server\frm\OpmDisplayForm.resx">
+      <Link>form\OpmDisplayForm.resx</Link>
+      <DependentUpon>OpmDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ChamberControl.resx">
+      <DependentUpon>ChamberControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\McuTestForm.resx">
+      <DependentUpon>McuTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ScanForm.resx">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MeasureForm.resx">
+      <DependentUpon>MeasureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\AlignForm.resx">
+      <DependentUpon>AlignForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmAlignStatus.resx">
+      <DependentUpon>frmAlignStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmAxisSearchGraph.resx">
+      <DependentUpon>frmAxisSearchGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\InitForm.resx">
+      <DependentUpon>InitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmProcessRes.resx">
+      <DependentUpon>frmProcessRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmSourceController.resx">
+      <DependentUpon>frmSourceController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmStageControl3Stage.resx">
+      <DependentUpon>frmStageControl3Stage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ReferenceForm.resx">
+      <DependentUpon>ReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ScanMonitorPort.resx">
+      <DependentUpon>ScanMonitorPort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\TlsStateTestForm.resx">
+      <DependentUpon>TlsStateTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\uiStageControl.resx">
+      <DependentUpon>uiStageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="config\conf_MC_Suruga_Center.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\conf_MC_Suruga_Left.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\conf_MC_Suruga_Right.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\DwdmMeasure.XmlConfig">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\MyLogic.XmlConfig">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="config\CenterAligner.AS1.XmlConfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="config\LeftAligner.AS1.XmlConfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="config\RightAligner.AS1.XmlConfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\ServerConfig.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\XySearchParam.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ic.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\config_AlignStatus.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\config_DigiOptPwr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\config_initialization.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\config_reference.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\conf_alignment.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\conf_distSens.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\conf_optSourCont.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\conf_processRes.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\conf_StageControl3stg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="dwdm_reference.ref">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="updateNotes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AligiLogicLib\AligiLogicLib.csproj">
+      <Project>{316aaa57-0b3f-45d2-8e71-69febc2693f8}</Project>
+      <Name>AligiLogicLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlignerBase\AlignerBase.csproj">
+      <Project>{0d71d498-070f-4bd9-afd0-241c7a9769fc}</Project>
+      <Name>AlignerBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlignStageBase\McBase.csproj">
+      <Project>{54ec0cdf-980a-486f-b61f-ff2fc01c7f22}</Project>
+      <Name>McBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlignStage\Aligner.csproj">
+      <Project>{87a0b56c-47f1-47cf-8c0d-3c4d74a46d6e}</Project>
+      <Name>Aligner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\align_server\AlignLogic.csproj">
+      <Project>{02b86448-7ea5-4e7a-b15d-a177a7050e5b}</Project>
+      <Name>AlignLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppLogic\AppLogic.csproj">
+      <Project>{ee2dd64a-8b57-4820-aeb1-ee5d3ff680af}</Project>
+      <Name>AppLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutonicsMc\AutonicsMc.csproj">
+      <Project>{60ab794e-87de-48f9-b870-a45581407799}</Project>
+      <Name>AutonicsMc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLogic\DataLogic.csproj">
+      <Project>{0f800dac-e526-462f-80a6-fd3ffaaae11f}</Project>
+      <Name>DataLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeviceBase\DeviceBase.csproj">
+      <Project>{70c3c630-9dce-44d1-998b-37afb2c721e3}</Project>
+      <Name>DeviceBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeviceDriver\DeviceDriver.csproj">
+      <Project>{af94284a-f0e0-4d38-8f03-8afdeeffe439}</Project>
+      <Name>DeviceDriver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NovaMc\NovaMc.csproj">
+      <Project>{3f50124c-e0d3-49d5-b884-957ca01eff9e}</Project>
+      <Name>NovaMc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sweep_server\sweep_server.csproj">
+      <Project>{d9a9ce45-9524-4bb3-9b11-d8c491bde6e7}</Project>
+      <Name>sweep_server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI\UI.csproj">
+      <Project>{51c2bf12-5e9c-4f81-a32d-c2879b9f1f4d}</Project>
+      <Name>UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Universe.TcpServer.Common">
+      <Version>2.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem xcopy /e /y  $(TargetDir)*  \\192.168.0.42\DrBae\$(ProjectName)\</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

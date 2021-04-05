@@ -1,0 +1,132 @@
+﻿[2016-03-15]
+1.XyFullBlindSeach 정보 파일에 저장하는 기능 추가.
+2.vserion up
+   - 1.0.2.3
+3.NeonAligner.dll 변경.
+   - 1.0.4.0
+
+[2016-03-07]
+1.XyFullBlindSearch시 포지션 저장및 시간 데이터 저장하는 기능 추가.
+2.version up
+   - 1.0.2.2
+
+[2016-03-03]
+1.XyFullBlindSearch method 수정.
+ -정렬 실패시 초기위치로 가는 코드 수정
+  -> relmMove -> absMove 
+  -> 정렬 실패시 그자리에서 멈추도록 수정.
+  
+
+2.버젼 변경
+  - 1.0.2.1
+
+
+[2016-02-26]
+1.버젼 변경
+  - 1.0.2.0
+
+[2016-02-26]
+1.버젼 변경
+  - 1.0.2.0
+
+
+[2016-02-17]
+1.XyBlindSearchsBySpiral() method 추가
+2.XyFullBlindSearch() method 추가
+   - XyBlindSearchsBySpiral() method이용하여 구현.
+
+
+[2016-02-16]
+1.Calignment RollOut method 수정.
+  - state에 optical power 저장할때 잘못 저장한 부분 수정.
+1.version up.
+  - version 1.0.1.2
+
+[2016-02-05]
+참조어셈블리 변경 : NeonAligner.dll, NeonAlignerBase.dll 추가, jeffDevBase.dll 제거
+
+[2016-01-22]
+1.재컴파일
+  - version 1.0.0.1
+
+
+
+[2016-01-19]
+1. AxisSearch 변경.
+  -서칭 방향 변경 (minus - > plus) , minus로 하면 그래프 그릴때 Range부분에서 에러가 남.
+
+2.RollOut 수정
+   -tls: 파장선택 버그 수정.
+   -non-tls: state 저장. 
+
+
+
+
+------ 2016.1.15 -------
+1. CalcCtrPos method, CalcPwrByPos  수정
+  - 기존 무조건 데이터는 1um 간격으로 있다고 가정하고 계산했던것을
+    데이터간격을 파라메터로 입력받을 수 있도록 수정.
+
+2. jeffDevBase.dll 변경.
+  - version 1.0.0.4
+
+3. Calignment class Roll() method 수정.
+  - searching step, searching range  입력 할수있도록 구현
+
+
+
+------ 2016.1.14 -------
+1.jeffsoft_math.dll 추가.
+  - 1.0.0.1
+
+2. 광파워,스테이지 좌표 표현 resolution non-hardcoding
+	private const int OPTPWRRES = 9;    //광파워 표현 reolution (1.0*10^-9 mW)
+    private const int STGPOSXYZRES = 2;    //스테이지 좌표 resolution (1.0*10^-2 um)
+    private const int STGPOSUVWRES = 4;    //스테이지 좌표 resolution (1.0*10^-4 degree)
+    private const int DISTSENSRES = 3;  //Distance sensor resolution
+
+3. CalignStatRes class 추가 및 수정.
+
+4. CalignStatRes class 수정 상황에 맞게 Calignment class 수정.
+
+5. ref D:\work\neon\초아\모듈화1\choa_calign_20160114_1
+
+
+
+------ 2016.1.13 -------
+1.jeffDevBase.dll포함. 
+  - 1.0.0.3
+
+2. Jeffsoft_optic.dll 포함
+  - 1.0.0.0
+
+2.calignment class 구현중
+  
+  -광파워 resolution : 1*10(^-9) mW 통일
+   stage 이동 resolution : 1*10(^-2) um 통일
+
+  - IsCompleted() : 완료
+  - XySearch() : 완료
+  - XyBlindSearch() : 완료
+  - AxisSearch() : 완료
+  - AxisBlindSearch() : 구현중
+  - SyncXySearch : 완료
+  - SyncAxisSearch : 완료
+  - RollIn() : 현재까지 구현 계획 없음.
+  - RollOut() : 구현중
+
+
+3.Target framework version 변경 ( 4.6  )
+  - .net framework 버전 통일 필요.
+
+
+
+
+------ 2016.1.12 -------
+1.solution에 포함. 
+  ref D:\work\neon\library\neonAligner_20151216
+
+2.IAlignmentDgital inteface 수정.
+  -method 이름 변경, 불필요한 method 제거 및 통합. (배삼용 책임과 협의함.)
+
+

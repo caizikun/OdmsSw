@@ -1,0 +1,8 @@
+﻿192.168.3.29
+13000
+AWG_05
+
+
+#server ip
+#server port
+#client id

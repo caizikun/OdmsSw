@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Neon.Aligner.choa_server.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="lapdDutForm_Savefolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Save Folder :</Value>
+    </Setting>
+    <Setting Name="lapdChipWidth" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2990</Value>
+    </Setting>
+    <Setting Name="lapdWaveStart" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1271</Value>
+    </Setting>
+    <Setting Name="lapdOffsetZ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">20000</Value>
+    </Setting>
+    <Setting Name="lapdOffsetY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="lapdOffsetBack" Type="System.String" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="lapdOffsetReturn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="InitTlsServer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
